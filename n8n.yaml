@@ -6,18 +6,17 @@ services:
     ports:
       - "80:5678"
     environment:
-      - N8N_ENCRYPTION_KEY=
-      - N8N_SECURE_COOKIE=false
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=n8n
-      - N8N_BASIC_AUTH_PASSWORD=
-      - N8N_PROTOCOL=https
-      - WEBHOOK_URL=
-      - DB_TYPE=sqlite
-      - DB_SQLITE_DATABASE=/home/node/.n8n/database.sqlite
+      N8N_ENCRYPTION_KEY: ""
+      N8N_SECURE_COOKIE: "false"
+      N8N_BASIC_AUTH_ACTIVE: "true"
+      N8N_BASIC_AUTH_USER: "n8n"
+      N8N_BASIC_AUTH_PASSWORD: ""
+      N8N_PROTOCOL: "https"
+      WEBHOOK_URL: ""
+      DB_TYPE: "sqlite"
+      DB_SQLITE_DATABASE: "/home/node/.n8n/database.sqlite"
     volumes:
       - n8n_data:/home/node/.n8n
 
 volumes:
   n8n_data:
-
